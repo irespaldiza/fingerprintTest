@@ -8,7 +8,7 @@ if [ -z "$VERSION" ]; then
         exit 1
 fi
 
-actionsRepos=(test1
+actionsRepos=(
         test2
 	)
 
