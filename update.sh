@@ -22,7 +22,7 @@ for repo in "${actionsRepos[@]}"; do
         ret=0
         git commit -m "release $VERSION" || ret=1
         if [ $ret -ne 1 ]; then
-                git push git@github.com:okteto/"$repo".git master
+                git push git@github.com:irespaldiza/"$repo".git master
                 git --no-pager log -1
         fi
         cd -
