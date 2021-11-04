@@ -10,7 +10,6 @@ fi
 
 actionsRepos=(
         test1
-        test2
 	)
 
 for repo in "${actionsRepos[@]}"; do
