@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-VERSION=0.1
+VERSION=0.3
 
 if [ -z "$VERSION" ]; then
         echo "missing version"
@@ -9,6 +9,7 @@ if [ -z "$VERSION" ]; then
 fi
 
 actionsRepos=(test1
+        test2
 	)
 
 for repo in "${actionsRepos[@]}"; do
