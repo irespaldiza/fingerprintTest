@@ -13,7 +13,7 @@ jobs:
           name: test
           command: |
             go get -u github.com/tcnksm/ghr
-            ./update.sh $CIRCLE_TAG
+            ./update.sh 0.1.1
 workflows:
   version: 2
   test:
