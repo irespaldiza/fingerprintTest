@@ -9,7 +9,7 @@ if [ -z "$VERSION" ]; then
 fi
 
 actionsRepos=(
-        test2
+        test1
 	)
 
 for repo in "${actionsRepos[@]}"; do
