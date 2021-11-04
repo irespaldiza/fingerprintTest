@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  test:
+    docker:
+    - image: okteto/golang-ci:1.17.3
+    steps:
+    - checkout
+    - add_ssh_keys:
+      fingerprints:
+        - 
+      - deploy:
+          name: Auto-update-actions
+          command: |
+            go get -u github.com/tcnksm/ghr
+            ./update_actions.sh $CIRCLE_TAG
