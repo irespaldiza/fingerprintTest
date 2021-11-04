@@ -26,6 +26,7 @@ for repo in "${actionsRepos[@]}"; do
         if [ $ret -ne 1 ]; then
                 git push 
         fi
+        date > test.txt
         cd -
         rm -rf "$repo"
 done
