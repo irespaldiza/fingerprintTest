@@ -14,7 +14,7 @@ actionsRepos=(test1
 for repo in "${actionsRepos[@]}"; do
 	echo $repo
 	git clone --depth 1 git@github.com:irespaldiza/"$repo".git
-	pushd "$repo"
+	cd "$repo"
 	git config user.name "irespaldiza"
         git config user.email "irespaldiza@okteto.com"
         sed -iE 's_FROM\ okteto\/okteto\:latest_FROM\ okteto\/okteto\:'"$VERSION"'_' Dockerfile
@@ -25,6 +25,6 @@ for repo in "${actionsRepos[@]}"; do
                 git push git@github.com:okteto/"$repo".git master
                 git --no-pager log -1
         fi
-        popd
+        cd -
         rm -rf "$repo"
 done
